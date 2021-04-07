@@ -1,0 +1,130 @@
+* {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+ul a:hover {
+    background-color: #53f6c7;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(0, 0, 0, 0.75);
+}
+
+
+.bg-black {
+    background-color: #000000;
+}
+
+/* Show it's not fixed to the top */
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+#Main-Text {
+    font-size: 60px;
+}
+
+span {
+    color: #53f6c7;
+}
+
+.section {
+    color: #53f6c7;
+}
+
+.Icon1:hover {
+    color: #1e5645;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #212529;
+    border-color: #000;
+}
+
+.btn-success:hover {
+    color: #000000;
+    background-color: #53f6c7;
+    border-color: #000;
+}
+
+.bg-mint {
+    background-color: #53f6c7;
+}
+
+.start-15 {
+    left: 15%;
+}
+
+.bi {
+    display: inline-block;
+    vertical-align: -.125em;
+}
+
+.social-success:hover {
+    color: #53f6c7;
+}
+
+/*Зміна кольору виділення*/
+::selection {
+    background: #1abc9c;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+
+    .navbar-dark .navbar-brand {
+        color: #000000;
+    }
+
+    .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+        color: #000000;
+    }
+
+    .navbar-dark .navbar-nav .show > .nav-link,
+    .navbar-dark .navbar-nav .nav-link.active {
+        color: #000000;
+    }
+
+    .navbar-dark .navbar-toggler {
+        color: #53f6c7;
+    }
+
+    .navbar-dark .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    ul a:hover {
+        background-color: #ffffff;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+        color: #53f6c7;
+    }
+
+    .bg-black {
+        background-color: #ffffff;
+    }
+
+    .fixed-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+    }
+
+    /* Show it's not fixed to the top */
+    body {
+        min-height: 75rem;
+        padding-top: 0;
+    }
+
+    #Main-Text {
+        font-size: 42px
+    }
+}
+
+ul li::marker {
+    color: #53f6c7;
+}
