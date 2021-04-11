@@ -16,7 +16,6 @@
 <body class="bg-dark">
 <div class="container-fluid ">
 
-    <!--DoneMaby-->
     <header>
         <nav class=" row navbar navbar-expand-sm  fixed-top navbar-dark bg-black p-3  border-bottom">
             <div class="container-fluid">
@@ -27,10 +26,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse " id="NavToggler">
-                    <ul class="navbar-nav  ms-auto  text-center p-1">
+                <div class="collapse navbar-collapse  " id="NavToggler">
+                    <ul class="navbar-nav ms-auto text-center p-1">
                         <li class="nav-item ">
-                            <a class="nav-link active" href="#Photo1">Home</a>
+                            <a class="nav-link active" href="#Home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#AboutMe">About Me</a>
@@ -51,13 +50,12 @@
         </nav>
     </header>
 
-
     <main>
-        <!--Done-->
-        <div class="container  pt-lg-5 pt-md-5 pt-sm-5">
+
+        <div id="Home" class="container  mt-lg-5 mt-md-5 mt-sm-5 mt-5">
             <div class="row">
 
-                <div class="col-lg-6 col-md-6 col-sm-12 pt-1 pb-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-1 mb-4">
                     <div class="col-lg-12 ">
                         <h1 class="text-white ps-0 ">
                             <b id="Main-Text"><span>&lt;b&gt;</span>Hello<span>&lt;/b&gt;</span><br></b>
@@ -67,13 +65,13 @@
                         </h1>
                     </div>
                     <div class="col-lg-12">
-                        <p class="text-white fs-4 pt-3 pb-3">Beginner website developer and web client. I develop on
+                        <p class="text-white fs-4 mt-3 mb-3">Beginner website developer and web client. I develop on
                             technologies HTML5, CSS3, JS, BOOTSTRAP5 and so on ... And it is my 1 site of a portfolio.
                         </p>
                     </div>
 
                     <div class="col-lg-12">
-                        <p class="text-white fs-5 pt-3 pb-3">If You Want To Hire Me<br>
+                        <p class="text-white fs-5 mt-3 mb-3">If You Want To Hire Me<br>
                             <span>Scroll Down</span></p>
                         <a class="Icon1 link-light" href="#ToContact">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
@@ -85,29 +83,41 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 pt-1">
-                    <img id="Photo1" src="image/Photo1.JPG" alt="Photo1" class="img-fluid img-thumbnail">
+                <div class="col-lg-6 col-md-6 col-sm-12 mt-1">
+                    <div class="image-anim">
+                        <img src="image/Photo1.JPG" alt="Photo1" class="img-fluid img-thumbnail">
+                        <div class="image-switch">
+                            <div class="image-switch-item">
+                                <div class="switched-image">
+                                    <img src="image/Photo2.jpg" alt="Photo2" class="img-fluid img-thumbnail">
+                                </div>
+                            </div>
+                            <div class="image-switch-item">
+                                <div class="switched-image">
+                                    <img src="image/Photo3.JPG" alt="Photo3" class="img-fluid img-thumbnail">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </div>
 
-        <!--About Me-->
-        <div class="container">
+        <div id="AboutMe" class="container">
             <div class="row text-white">
 
-                <div class=" pt-5 pb-5">
-                    <h1 id="AboutMe">
+                <div class=" mt-5 mb-5">
+                    <h1>
                         <span
-                                class="text-uppercase">About Me
+                                class="text-uppercase Text-HR">About Me
                         </span>
                     </h1>
-                    <hr class="section">
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <h2 class="text-center"><span>2018</span></h2>
-                    <hr>
+                    <h2 class="text-center Text-HR_Ul"><span>2018</span></h2>
                     <ul>
                         <li>
                             <b class="fs-4">
@@ -126,8 +136,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <h2 class="text-center"><span>2019</span></h2>
-                    <hr>
+                    <h2 class="text-center Text-HR_Ul"><span>2019</span></h2>
                     <ul>
                         <li>
                             <b class="fs-4">
@@ -146,8 +155,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <h2 class="text-center"><span>2020</span></h2>
-                    <hr>
+                    <h2 class="text-center Text-HR_Ul"><span>2020</span></h2>
                     <ul>
                         <li>
                             <b class="fs-4">
@@ -163,8 +171,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-sm-12 ">
-                    <h2 class="text-center"><span>2021</span></h2>
-                    <hr>
+                    <h2 class="text-center Text-HR_Ul"><span>2021</span></h2>
                     <ul>
                         <li>
                             <b class="fs-4">
@@ -191,22 +198,24 @@
             </div>
         </div>
 
-        <!--Project-->
-        <div class="container">
+        <div id="Project" class="container">
             <div class="row text-white">
 
-                <div class=" pt-5 pb-5">
-                    <h1 id="Project">
+                <div class=" mt-5 mb-5">
+                    <h1>
                         <span
-                                class="text-uppercase">Project
+                                class="text-uppercase Text-HR">Project
                         </span>
                     </h1>
-                    <hr class="section">
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card bg-dark border-light mb-4">
-                        <img src="image/Project1.PNG" class="card-img-top" alt="...">
+                        <div class="scale">
+                            <a href="https://pavloseniv.github.io/Frontend/Laba3(float,flex,grid)/index.html">
+                                <img src="image/Project1.PNG" class="card-img-top" alt="Project1">
+                            </a>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Project1</h5>
                             <p class="card-text">This project uses HTML5 and CSS3 technologies. Implemented adaptive
@@ -214,14 +223,19 @@
                                 and applied BOOTSTRAP5.
                             </p>
                             <a href="https://pavloseniv.github.io/Frontend/Laba3(float,flex,grid)/index.html"
-                               class="btn border-2 border-light btn-success">Go to Project</a>
+                               class="button_anim btn border-2 border-light btn-success">Go to Project</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card bg-dark border-light mb-4">
-                        <img src="image/Project2.PNG" class="card-img-top" alt="...">
+                        <div class="scale">
+                            <a href="https://pavloseniv.github.io/Frontend/Laba4/index.html">
+                                <img src="image/Project2.PNG" class="card-img-top" alt="Project2">
+                            </a>
+                        </div>
+
                         <div class="card-body">
                             <h5 class="card-title">Project2</h5>
                             <p class="card-text">This project uses HTML5 and CSS3 technologies. Implemented adaptive
@@ -229,14 +243,19 @@
                                 and applied BOOTSTRAP5.
                             </p>
                             <a href="https://pavloseniv.github.io/Frontend/Laba4/index.html"
-                               class="btn border-2 border-light btn-success">Go to Project</a>
+                               class="button_anim btn border-2 border-light btn-success">Go to Project</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card bg-dark border-light mb-4">
-                        <img src="image/Project3.PNG" class="card-img-top" alt="...">
+
+                        <div class="scale">
+                            <a href="https://pavloseniv.github.io/Frontend/Laba5/index.html">
+                                <img src="image/Project3.PNG" class="card-img-top" alt="Project3">
+                            </a>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Project3</h5>
                             <p class="card-text">This project uses HTML5 and CSS3 technologies. Implemented adaptive
@@ -244,7 +263,27 @@
                                 and applied BOOTSTRAP5.
                             </p>
                             <a href="https://pavloseniv.github.io/Frontend/Laba5/index.html"
-                               class="btn border-2 border-light btn-success">Go to Project</a>
+                               class="button_anim btn border-2 border-light btn-success">Go to Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card bg-dark border-light mb-4">
+
+                        <div class="scale">
+                            <a href="https://pavloseniv.github.io/ProjectFigma/Project1/">
+                                <img src="image/Project4.PNG" class="card-img-top" alt="Project4">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Project4</h5>
+                            <p class="card-text">This project uses HTML5 and CSS3 technologies. Implemented adaptive
+                                layout
+                                and applied BOOTSTRAP5.
+                            </p>
+                            <a href="https://pavloseniv.github.io/ProjectFigma/Project1/"
+                               class="button_anim btn border-2 border-light btn-success">Go to Project</a>
                         </div>
                     </div>
                 </div>
@@ -252,20 +291,18 @@
             </div>
         </div>
 
-        <!--Skills-->
-        <div class="container">
+        <div id="Skills" class="container">
             <div class="row text-white">
 
-                <div class=" pt-5 pb-5">
-                    <h1 id="Skills">
+                <div class=" mt-5 mb-5">
+                    <h1>
                         <span
-                                class="text-uppercase">Skills
+                                class="text-uppercase Text-HR">Skills
                         </span>
                     </h1>
-                    <hr class="section">
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 pt-3 pb-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mb-3">
                     <ul>
                         <li>
                             <h3 class="text-uppercase">Frontend</h3>
@@ -308,7 +345,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 pt-3 pb-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mb-3">
                     <ul>
                         <li>
                             <h3 class="text-uppercase">Backend</h3>
@@ -351,7 +388,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 pt-3 pb-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mb-3">
                     <ul>
                         <li>
                             <h3 class="text-uppercase">Framework</h3>
@@ -394,7 +431,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-sm-12 pt-3">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
                     <ul>
                         <li>
                             <h3 class="text-uppercase">Other</h3>
@@ -462,28 +499,22 @@
             </div>
         </div>
 
-        <!--Contact-->
-        <div class="container mb-5">
+        <div id="ToContact" class="container mb-5">
             <div class="row text-white">
 
-                <div class=" pt-5 pb-5">
-                    <h1 id="ToContact">
+                <div class=" mt-5 mb-5">
+                    <h1>
                         <span
-                                class="text-uppercase">Contact
+                                class="text-uppercase Text-HR">Contact
                         </span>
                     </h1>
-                    <hr class="section">
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12">
 
-                    <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 Text-HR_Contact">
                         <h1><b>Hire Me<br> For The Next<br> Projects.</b>
                         </h1>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <hr>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -514,26 +545,30 @@
                 </div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="btn border-2 border-light btn-success " type="button">Send</button>
+                    <button class="button_anim btn border-2 border-light btn-success " type="button">Send</button>
                 </div>
             </div>
         </div>
 
     </main>
 
-    <!--Done-->
     <footer class="text-white">
         <div class="border-top row"></div>
         <div class="container ">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 ">
-                    <p class=" m-0 text-lg-start text-md-start text-sm-center text-center p-lg-4 ps-lg-0 p-md-4 ps-md-0 p-sm-2 ps-sm-0 p-2 ps-0  ">
-                        ©
-                        Copyright P.Seniv</p>
+                    <p class=" m-0 text-lg-start text-md-start text-sm-center text-center m-lg-4 ms-lg-0 m-md-4 ms-md-0 m-sm-2 ms-sm-0 m-2 ms-0">
+                        P.Seniv:<a href="mailto:enazydragnil@gmail.com" class="text-white text-decoration-none p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                             class="ms-1 text-decoration-none bi social-success" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                        </svg>
+                    </a>
+                    </p>
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                    <p class=" m-0 text-lg-end text-md-end text-sm-center text-center p-lg-4 pe-lg-0 p-md-4 pe-md-0 p-sm-2 pe-sm-0 p-2 pe-0  ">
+                    <p class=" m-0 text-lg-end text-md-end text-sm-center text-center m-lg-4 me-lg-0 m-md-4 me-md-0 m-sm-2 me-sm-0 m-2 me-0">
                         Follow
                         me:
                         <a href="https://www.instagram.com/" class="text-white text-decoration-none p-1">

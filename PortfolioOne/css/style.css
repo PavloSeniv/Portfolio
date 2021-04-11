@@ -2,8 +2,17 @@
     font-family: 'Titillium Web', sans-serif;
 }
 
+ul a {
+    border-radius: 5px;
+}
+
 ul a:hover {
     background-color: #53f6c7;
+
+}
+
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+    color: #53f6c7;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
@@ -29,9 +38,32 @@ span {
     color: #53f6c7;
 }
 
-.section {
-    color: #53f6c7;
+.Text-HR:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #53f6c7;
 }
+
+.Text-HR_Ul:after {
+    content: "";
+    display: block;
+    width: 90%;
+    margin: auto auto;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.Text-HR_Contact:after {
+    content: "";
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    height: 1px;
+    background-color: #ffffff;
+}
+
 
 .Icon1:hover {
     color: #1e5645;
@@ -72,14 +104,67 @@ span {
     color: #fff;
 }
 
-@media (max-width: 576px) {
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #53f6c7;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #1abc9c
+}
+
+textarea {
+    resize: vertical;
+    max-height: 300px;
+}
+
+textarea.form-control {
+    min-height: calc(2em + 4rem + 2px);
+}
+
+@media (min-width: 1201px) {
+    ul a {
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px ) {
+    ul a {
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 992px ) {
+    ul a {
+        width: 100px;
+    }
+
+    #Main-Text {
+        font-size: 50px
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px ) {
+
+    ul a {
+        width: 80px;
+        height: 60px;
+    }
+
+    #Main-Text {
+        font-size: 45px
+    }
+}
+
+@media (max-width: 575px) {
 
     .navbar-dark .navbar-brand {
         color: #000000;
     }
 
     .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-        color: #000000;
+        color: #53f6c7;
     }
 
     .navbar-dark .navbar-nav .show > .nav-link,
@@ -121,10 +206,119 @@ span {
     }
 
     #Main-Text {
-        font-size: 42px
+        font-size: 32px
     }
 }
 
 ul li::marker {
     color: #53f6c7;
+}
+
+/*Для задання збільшення зображення*/
+.scale {
+    display: inline-block; /*Рядково-блочний елемент*/
+    overflow: hidden; /*Ховаємо все за контуром*/
+}
+
+.scale img {
+    transition: 1s; /*Час ефекту*/
+    display: block; /*Видаляємо невеликий відступ*/
+}
+
+.scale img:hover {
+    transform: scale(1.2); /*Збільшення масштабу*/
+}
+
+/*Для анімації кнопки*/
+.button_anim:hover {
+    transition: all .2s;
+    animation: shadow .6s infinite linear;
+}
+
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 10px 0 #53f6c7, 0 0 10px 0 #53f6c7;
+    }
+    100% {
+        box-shadow: 0 0 8px 4px rgba(255, 48, 26, 0), 0 0 2px 20px rgba(255, 48, 26, 0);
+    }
+}
+
+/*Анімація для переключання полоски*/
+.image-anim {
+    position: relative;
+    overflow: hidden;
+    transition: all 0s ease-in-out;
+}
+
+.image-switch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: all 0s ease-in-out;
+}
+
+.image-anim img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-switch-item {
+    width: 50%; /*Міняє к-сть стовпців для відображення фото*/
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+}
+
+/*Для неактивної полоски*/
+.image-switch-item::after {
+    content: "";
+    width: 90%;
+    margin: 2px auto;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    transition: all 0s ease-in-out;
+}
+
+.switched-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0s ease-in-out; /*Зміна міняє швидкість переходу між фото*/
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.image-anim:hover .image-switch {
+    opacity: 1;
+    transition: all 0s ease-in-out;
+}
+
+.image-switch-item:hover .switched-image {
+    transition: all 0s ease-in-out;
+    opacity: 1;
+    z-index: -1;
+}
+
+/*Для активної полоски*/
+.image-switch-item:hover::after {
+    background-color: #53f6c7;
+    transition: all 0s ease-in-out;
 }
