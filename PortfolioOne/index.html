@@ -500,6 +500,7 @@
         </div>
 
         <div id="ToContact" class="container mb-5">
+
             <div class="row text-white">
 
                 <div class=" mt-5 mb-5">
@@ -527,29 +528,34 @@
                 </div>
 
                 <div class="col-lg-6 col-md-6 col-sm-12 ">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput0" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput0"
-                               placeholder="Pavlo Seniv">
-                    </div>
+                    <form action="https://formspree.io/f/xpzkqlle" method="POST">
 
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                               placeholder="name@gmail.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">You Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput0" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="exampleFormControlInput0"
+                                   placeholder="Pavlo Seniv">
+                        </div>
 
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                    <button class="button_anim btn border-2 border-light btn-success " type="button">Send</button>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" name="mail" class="form-control" id="exampleFormControlInput1"
+                                   placeholder="name@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">You Message</label>
+                            <textarea name="message" class="form-control" id="exampleFormControlTextarea1"
+                                      rows="3" placeholder="You message"></textarea>
+                        </div>
+
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="button_anim btn border-2 border-light btn-success " type="submit">Send
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-
     </main>
 
     <footer class="text-white">
