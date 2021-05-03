@@ -2,6 +2,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.fonts-girassol {
+    font-family: 'Girassol', cursive;
+}
+
 ::selection {
     color: #ffffff;
     background-color: #00D5E4;
