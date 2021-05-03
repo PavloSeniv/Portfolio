@@ -11,6 +11,14 @@
     background-color: #EEEFF1;
 }
 
+.bg-blue {
+    background-color: #00D5E4;
+}
+
+.font-size {
+    font-size: 16px;
+}
+
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
     color: #00D5E4;
 }
@@ -26,13 +34,6 @@
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-}
-
-.font-size {
-    font-size: 16px;
-}
-
-.p-main {
 }
 
 .btn {
@@ -53,6 +54,13 @@
     border-color: #000000;
 }
 
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+    color: #000000;
+    background-color: #00D5E4;
+    border-color: #000000;
+    box-shadow: 0 0 0 0.25rem #00D5E4;
+}
+
 .btn-animation:hover {
     transition: all .1s;
     animation: shadow .6s infinite alternate-reverse;
@@ -71,22 +79,185 @@
     padding: 150px 50px 150px 50px;
 }
 
-@media (min-width: 1201px) {
+/*Анімація для переключання полоски*/
+.image-anim {
+    position: relative;
+    overflow: hidden;
+    transition: all 0s ease-in-out;
+}
 
+.image-switch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    opacity: 0;
+    transition: all 0s ease-in-out;
+}
+
+.image-anim img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-switch-item {
+    width: 50%; /*Міняє к-сть стовпців для відображення фото*/
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+}
+
+/*Для неактивної полоски*/
+.image-switch-item::after {
+    content: "";
+    width: 90%;
+    margin: 2px auto;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    transition: all 0s ease-in-out;
+}
+
+.switched-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0s ease-in-out; /*Зміна міняє швидкість переходу між фото*/
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.image-anim:hover .image-switch {
+    opacity: 1;
+    transition: all 0s ease-in-out;
+}
+
+.image-switch-item:hover .switched-image {
+    transition: all 0s ease-in-out;
+    opacity: 1;
+    z-index: -1;
+}
+
+/*Для активної полоски*/
+.image-switch-item:hover::after {
+    background-color: #00D5E4;
+    transition: all 0s ease-in-out;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #00D5E4;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/*Для задання збільшення зображення*/
+.scale {
+    display: inline-block; /*Рядково-блочний елемент*/
+    overflow: hidden; /*Ховаємо все за контуром*/
+}
+
+.scale img {
+    transition: 1s; /*Час ефекту*/
+    display: block; /*Видаляємо невеликий відступ*/
+}
+
+.scale img:hover {
+    transform: scale(1.2); /*Збільшення масштабу*/
+}
+
+.border-primary {
+    border-color: #00D5E4 !important;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #00D5E4;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #00D5E4
+}
+
+textarea {
+    resize: vertical;
+    max-height: 300px;
+}
+
+textarea.form-control {
+    min-height: calc(2em + 4rem + 2px);
+}
+
+.bi {
+    display: inline-block;
+    vertical-align: -.125em;
+}
+
+.social-success:hover {
+    color: #000000;
+}
+
+@media (min-width: 1201px) {
+    .p-about {
+        padding: 100px 300px;
+    }
+
+    .p-about-2 {
+        padding: 100px 0;
+    }
 }
 
 @media (min-width: 993px) and (max-width: 1200px ) {
+    .p-about {
+        padding: 100px 200px;
+    }
 
+    .p-about-2 {
+        padding: 100px 0;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px ) {
+    .p-about {
+        padding: 100px 75px 100px 75px;
+    }
 
+    .p-about-2 {
+        padding: 100px 0;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 768px ) {
+    .p-about {
+        padding: 100px 75px 100px 75px;
+    }
 
+    .p-about-2 {
+        padding: 100px 0;
+    }
 }
 
 @media (max-width: 575px) {
+    .p-about {
+        padding: 100px 30px;
+    }
 
+    .p-about-2 {
+        padding: 100px 0;
+    }
 }
