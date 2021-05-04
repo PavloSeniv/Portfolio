@@ -258,25 +258,25 @@ Footer
 Adaptivity
 --------------------------*/
 
-@media (min-width: 1201px) {
+@media (min-width: 1200px) {
     .p-about {
         padding: 100px 300px;
     }
 }
 
-@media (min-width: 993px) and (max-width: 1200px ) {
+@media (min-width: 992px) and (max-width: 1999px ) {
     .p-about {
         padding: 100px 200px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 992px ) {
+@media (min-width: 768px) and (max-width: 991px ) {
     .p-about {
         padding: 100px 75px 100px 75px;
     }
 }
 
-@media (min-width: 576px) and (max-width: 768px ) {
+@media (min-width: 576px) and (max-width: 767px ) {
     .p-about {
         padding: 100px 75px 100px 75px;
     }
