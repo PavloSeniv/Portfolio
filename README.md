@@ -5,5 +5,5 @@ PortfolioOne Demo: https://pavloseniv.github.io/Portfolio/PortfolioOne/
 <br />
 PortfolioTwo Demo: https://pavloseniv.github.io/Portfolio/PortfolioTwo/
 <br />
-PortfolioThree Demo: https://pavloseniv.github.io/Portfolio/PortfolioThree/
+https://pavloseniv.github.io/Portfolio/PortfolioThree/PortfolioThree/
 <br />
