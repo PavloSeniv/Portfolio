@@ -10,4 +10,217 @@
 
 @import "fonts";
 
-/*============================= VARIABLES ==============================*/
+
+// ============================= VARIABLES ==============================
+$Header__Height: 3rem;
+
+// Purple 250 -- Green 142 -- Blue 230 -- Pink 340
+$Hue__Color: 250;
+
+// ================ HSL color mode ===============
+$First__Color: hsl($Hue__Color, 69%, 61%);
+$First__Color__Second: hsl($Hue__Color, 69%, 61%);
+$First__Color__Alt: hsl($Hue__Color, 57%, 53%);
+$First__Color__Lighter: hsl($Hue__Color, 92%, 85%);
+$Title__Color: hsl($Hue__Color, 8%, 15%);
+$Text__Color: hsl($Hue__Color, 8%, 45%);
+$Text__Color__Light: hsl($Hue__Color, 8%, 65%);
+$Input__Color: hsl($Hue__Color, 70%, 96%);
+$Body__Color: hsl($Hue__Color, 60%, 99%);
+$Container__Color: #FFF;
+
+//================ Typography ===============
+
+// .5rem = 8xp, 1rem = 16px, 1.5rem = 24px ...
+$Big__Font__Size: 2rem;
+$H1__Font__Size: 1.5rem;
+$H2__Font__Size: 1.25rem;
+$H3__Font__Size: 1.125rem;
+$Normal__Font__Size: .938rem; // 0.938rem
+$Small__Font__Size: .813rem;
+$Smaller__Font__Size: .75rem;
+
+//================ Margin Bottom ===============
+// .25rem = 4px, .5rem = 8px, .75rem = 12px ...
+$mb-0-25: .25rem;
+$mb-0-5: .5rem;
+$mb-0-75: .75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+$mb-2-5: 2.5rem;
+$mb-3: 3rem;
+
+//================ Z-index  ===============
+$Z__Tooltip: 10;
+$Z__Fixed: 100;
+$Z__Modal: 100;
+//============================= END VARIABLES ==============================
+
+// Font size for Large devices
+@media screen and (min-width: 968px) {
+  $Big__Font__Size: 3rem;
+  $H1__Font__Size: 2.25rem;
+  $H2__Font__Size: 1.5rem;
+  $H3__Font__Size: 1.25rem;
+  $Normal__Font__Size: 1rem;
+  $Small__Font__Size: .875rem;
+  $Smaller__Font__Size: .813rem;
+}
+
+/*============================= BASE ==============================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 $Header__Height 0;
+  font-family: "Poppins-Regular";
+  font-size: $Normal__Font__Size;
+  background-color: $Body__Color;
+  color: $Text__Color;
+}
+
+h1, h2, h3, h4 {
+  color: $Title__Color;
+  font-family: "Poppins-SemiBold";
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*============================= REUSABLE CSS CLASSES ==============================*/
+.Section {
+  padding: 2rem 0 4rem;
+
+  .Section__Title {
+    font-size: $H1__Font__Size;
+
+    .Section__Subtitle {
+      display: block;
+      font-size: $Small__Font__Size;
+      margin-bottom: $mb-3;
+    }
+  }
+}
+
+.Section__Title, .Section__Subtitle {
+  text-align: center;
+}
+
+/*============================= LAYOUT ==============================*/
+.Container {
+  max-width: 768px;
+  margin-left: $mb-1-5;
+  margin-right: $mb-1-5;
+}
+
+.Grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+/*============================= Header ==============================*/
+
+.Header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $Z__Fixed;
+  background-color: $Body__Color;
+}
+
+/*============================= Nav ==============================*/
+.Nav {
+  max-width: 968px;
+  height: $Header__Height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .Nav__Logo, .Nav__Toggle {
+    color: $Title__Color;
+    font-family: 'Poppins-Medium';
+
+    &:hover {
+      color: $First__Color;
+    }
+  }
+
+  .Nav__Toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Nav__Menu {
+    position: fixed;
+    bottom: -100%; /*Меню ховається за межі екрану*/
+    left: 0;
+    width: 100%;
+    background-color: $Body__Color;
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: .3s;
+  }
+}
+
+.Nav__List {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.Nav__Link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $Small__Font__Size;
+  color: $Title__Color;
+  font-family: 'Poppins-Medium';
+
+  &:hover {
+    color: $First__Color;
+  }
+}
+
+.Nav__Icon {
+  font-size: 1.2rem;
+}
+
+.Nav__Close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: $First__Color;
+
+  &:hover {
+    color: $First__Color__Alt;
+  }
+}
+
+/* show menu */
+.Show__Menu {
+  bottom: 0;
+}
